@@ -100,7 +100,7 @@ VALUES (1, 2, 2, 4),
 (4, 1, 3, 2),
 (5, 4, 5, 4);
 
-
+-- 3 Display the number of the customer group by their genders who have placed any order of amount greater than or equal to Rs.3000
 SELECT CUSTOMER.CUS_GENDER, COUNT(*) AS COUNT
 FROM CUSTOMER 
 INNER JOIN ORDERS ON CUSTOMER.CUS_ID = ORDERS.CUS_ID
@@ -108,7 +108,7 @@ WHERE ORD_AMOUNT >= 3000
 GROUP BY CUSTOMER.CUS_GENDER;
 
 
-
+-- 8 Display customer name and gender whose names start or end with character 'A' 
 
 SELECT CUS_NAME , CUS_GENDER FROM CUSTOMER WHERE  CUS_NAME LIKE "A%" OR CUS_NAME LIKE "%A";
 
